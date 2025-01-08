@@ -1,2 +1,4 @@
 # An Improved Two-Stage Binary Relevance Method
-This github repository contains R code that was used to fit the birds and yeast multilable datasets, as discussed in the manuscript "An Improved Two-Stage Binary Relevance Method" by Z. Chen and Q. Wang.
+This GitHub repository contains the R code used for fitting the birds and yeast multilabel datasets, as discussed in the manuscript "An Improved Two-Stage Binary Relevance Method" by Z. Chen and Q. Wang. The base classification method employed in all algorithms is logistic linear regression (GLIM).
+
+The default implementation of the proposed method, along with the Binary Relevance (BR) method and its variants, uses a discrimination threshold of 0.5. For the proposed method with empirical thresholds, the thresholds for dichotomization are determined by the empirical relative frequencies of each label subset in the training set, while the threshold for individual labels remains fixed at 0.5. Additionally, the proposed method with cross-validated (CV) thresholds tunes the discrimination thresholds via 10-fold cross-validation, optimizing either the Hamming loss or the F-measure.
